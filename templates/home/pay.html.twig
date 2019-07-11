@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}{% endblock %}
-
+{% block stylesheet %}{% endblock %}
 {% block body %}
-    <h1>pay</h1>
+    <h1 align="center">Payer votre cotisation</h1>
     <div class="container">
         <form action="pay" id="payment-form" class="form" method="post">
             <p> <div class="field">
@@ -20,7 +20,7 @@
             <h3>Erreurs</h3>
             <div id="card-errors"></div>
             <p> <div class="field">
-                <button type="submit" class="btn btn-primary">Valider</button> </div></p>
+                <button type="submit" class="btn btn-dark">Valider</button> </div></p>
 
         </form>
     </div>
@@ -99,5 +99,14 @@
                 form.submit();
             }
         </script>
+        <style>
+            .container {
+                padding-bottom: 5px;
+                padding-left: 200px;
+                padding-top: 5px;
+                margin-top: 5px;
+                background-color: #17a2b8;
+            }
+        </style>
     {% endblock %}
 {% endblock %}
