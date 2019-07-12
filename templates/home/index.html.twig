@@ -26,10 +26,88 @@
         position: relative;
         left:35em;
     }
+    input{ opacity: 0;
+        z-index: 7}
 
+
+    input{display: block;
+        position: absolute;
+        z-index: 4;
+        width: 200px;
+        height:  200px;
+        top: 30vh;
+        left: 40%}
+    a{text-decoration: none;
+        color: black}
+
+    *{margin: 0;
+        padding: 0;
+        box-sizing: border-box}
+
+    ul{list-style: none}
+
+    li{display: block;
+        position: absolute;
+        z-index: 3;
+        width: 200px;
+        height:  200px;
+        background: #B0413E;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 200px;
+        top: 30vh;
+        left: 40%;
+      }
+
+    li:nth-child(2),
+    li:nth-child(3),
+    li:nth-child(4),
+    li:nth-child(5){
+        top: 30vh;
+        left: 45%;
+        width: 80px;
+        height:  80px;
+        transition: .5s;
+        z-index: 2;
+        line-height: 80px;}
+
+    input:checked ~ ul li:nth-child(2){
+        background: pink;
+        top: 12vh;
+        left: 46%;
+    }
+
+    input:checked ~ ul li:nth-child(3){
+
+        background: pink;
+        top: 68vh;
+        left: 46%;
+    }
+
+    input:checked ~ ul li:nth-child(4){
+
+        background: pink;
+        top:44vh;
+        left: 30%;
+    }
+    input:checked ~ ul li:nth-child(5){
+
+        background: pink;
+        top:44vh;
+        left: 60%;
+    }
 
 
 </style>
+<input type="checkbox">
+
+<ul>
+    <li><a href="">Réjoignez notre association </a></li>
+    <li><a href="{{ path('about') }}">Nous?</a></li>
+    <li><a href="{{ path('project') }}">Projets</a></li>
+    <li><a href="{{ path('contact') }}">Contact</a></li>
+    <li><a href="{{ path('pay') }}">Cotisation</a></li>
+</ul>
 
     </body>
 {% endblock %}
